@@ -54,7 +54,7 @@ var orm ={
   
   },
   updateOne:function(table,objColVals,condtion,cb){
-    var dbQuery= "UPDATE" + table + "SET" + translateSql(objColVals)+"WHERE"+ condtion;
+    var dbQuery= "UPDATE " + table + " SET " + translateSql(objColVals)+" WHERE "+ condtion;
     connection.query(dbQuery,function(err, res){
       if(err){
         throw err;
@@ -63,8 +63,8 @@ var orm ={
     });
   },
   deleteOne: function(table,condtion,cb){
-    var dbQuery= "DELETE FROM" + table + "WHERE" + condtion;
-    connection.query(dbQuery,vals,function(err, res){
+    var dbQuery= "DELETE FROM " + table + " WHERE " + condtion;
+    connection.query(dbQuery,function(err, res){
       if(err){
         throw err;
       }

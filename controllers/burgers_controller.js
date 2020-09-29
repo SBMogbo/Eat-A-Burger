@@ -31,7 +31,7 @@ router.get("/", function (req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
-    burger.updateOne({ devoured: req.body.devoured }, condition, function (
+    burger.updateOne({ devoured: true }, condition, function (
       result
     ) {
       if (result.changedRows === 0) {
@@ -46,6 +46,7 @@ router.get("/", function (req, res) {
     console.log("condition", condition);
 
     burger.deleteOne(condition, function (result) {
+      console.log(result)
       if (result.changedRows === 0) {
         return res.status(404).end();
       } else {

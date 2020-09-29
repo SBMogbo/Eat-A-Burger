@@ -53,7 +53,7 @@ $(function () {
 
     //send delete request
     $.ajax({
-      type: "PUT",
+      type: "DELETE",
       url: "/api/burgers/" + id
     }).then(location.reload());
   });
