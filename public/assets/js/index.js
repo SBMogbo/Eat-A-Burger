@@ -7,7 +7,9 @@ $(function () {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#newBurger").val().trim(),
+      burger_name: $("#newBurger")
+      .val() 
+      .trim(),
       devoured: 0
     };
 
@@ -26,18 +28,17 @@ $(function () {
 
 
   $(".eatburger").on("click", function (event) {
-    var newDevoured = $(this).data("newdevoured");
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     var id = $(this).data("id");
-    var newDevouredState = {
+    var newDevoured = {
       devoured: 1
     };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newDevouredState
+      data: newDevoured
     }).then(
       function () {
         console.log("Burger Devoured!");
@@ -49,11 +50,12 @@ $(function () {
   $(".trashburger").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
+
     //send delete request
     $.ajax({
       type: "PUT",
       url: "/api/burgers/" + id
     }).then(location.reload());
-  })
+  });
 
 });
