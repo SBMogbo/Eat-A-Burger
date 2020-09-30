@@ -1,7 +1,7 @@
 {
   "name": "eataburger",
   "version": "1.0.0",
-  "description": "",
+  "description": "Burger app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "inquirer": "^7.3.3",
