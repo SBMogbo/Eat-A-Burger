@@ -1,21 +1,12 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+#headerone,h2{
+  text-align: center;
 }
 
-.label {
-  font-weight: bold;
-}
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
 
 .form-group {
-  margin-bottom: 5px;
+  font-weight: bold;
+  text-align:center;
 }
 body{
   background-color: orange;
@@ -23,5 +14,27 @@ body{
 #burgerpng{
   margin: auto;
   width: 50%;
-  padding: 10px;
+  padding: 30px;
+  border: black;
+  border-style: solid;
+  width: fit-content;
+  
+}
+
+.jumbotron{
+  
+  background-color: yellow;
+  
+}
+
+footer {
+
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
+  /* Vertically center the text there */
+  text-align: center;
+
 }

@@ -1,21 +1,21 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Create Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <h1 id="headerone">Create Your Burger </h1>
+        <h1 id="burgerpng"><img src="../assets/img/burger.png"></h1>
         <br>
-        <h2>type a Burger or Sandwich</h2>
+        <h2>Type in a Burger or Sandwich</h2>
         <panel>
             <form class="create-form">
                 <div class="form-group">
                     <label for="newburger">Order Fresh Burger</label>
                     {{!-- <input type="text" id="newburger" name="burger"> --}}
-                    <input "text" id="newBurger" name="burger">
+                    <input "text" placeholder="Type Burger Here!"id="newBurger" name="burger">
                        
                     </input>
 
                     <button type="submit" class="btn btn-success" id="addburger">
-                        <span class="fa fa-thumbs-up"></span>
+                        <span class="fa fa-thumbs-up"></span>Add
                     </button>
                 </div>
             </form>
@@ -35,7 +35,7 @@
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span>Order</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -55,7 +55,7 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span>Devour</button>
                         <hr>
                         {{/if}}
                         {{/each}}
@@ -71,3 +71,13 @@
     <!--endrow -->
 </div>
 <!--endcontainer -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!--footer-->
+      <footer>
+        <p>Made By Steven Brooks-Mogbo</p>
+      </footer>
+    </div>
+  </div>
+</div>
